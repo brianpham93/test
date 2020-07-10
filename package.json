@@ -9,6 +9,7 @@
         "start": "DEBUG=test:* node index.js"
     },
     "dependencies": {
+        "applicationinsights": "^1.8.2",
         "debug": "^4.1.1"
     }
 }
