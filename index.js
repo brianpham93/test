@@ -13,7 +13,6 @@ appInsight.setup(process.env.APPINSIGHTS_INSTRUMENTATIONKEY)
 appInsight.start()
 const server = http.createServer((request, response) => {
     debug('started')
-    console.log('something startedp')
     response.writeHead(200, {"Content-Type": "text/plain"});
     response.end("Hello World!");
 });
