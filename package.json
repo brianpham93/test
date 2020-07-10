@@ -6,6 +6,9 @@
     "license": "MIT",
     "author": "Microsoft",
     "scripts": {
-        "start": "node index.js"
+        "start": "DEBUG=test:* node index.js"
+    },
+    "dependencies": {
+        "debug": "^4.1.1"
     }
 }
