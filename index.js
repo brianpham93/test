@@ -1,8 +1,6 @@
 const http = require('http');
 const util = require('util');
-const debug = require('debug')('test:app')
 const logger = require('./logger')
-debug.log = (message) => logger.info(message)
 
 const appInsight = require('applicationinsights')
 appInsight.setup(process.env.APPINSIGHTS_INSTRUMENTATIONKEY)
@@ -16,7 +14,8 @@ appInsight.setup(process.env.APPINSIGHTS_INSTRUMENTATIONKEY)
 .setDistributedTracingMode(appInsight.DistributedTracingModes.AI)
 appInsight.start()
 const server = http.createServer((request, response) => {
-    debug('started')
+    logger.info('Request received')
+    logger.debug('Request: ', request)
     response.writeHead(200, {"Content-Type": "text/plain"});
     response.end("Hello World!");
 });
