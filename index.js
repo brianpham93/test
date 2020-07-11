@@ -1,6 +1,6 @@
 const http = require('http');
 const debug = require('debug')('test:app')
-debug.log = console.log.bind(console)
+debug.log = console.info.bind(console)
 const appInsight = require('applicationinsights')
 appInsight.setup(process.env.APPINSIGHTS_INSTRUMENTATIONKEY)
 .setAutoDependencyCorrelation(true)
