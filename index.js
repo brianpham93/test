@@ -25,5 +25,4 @@ const server = http.createServer((request, response) => {
 
 const port = process.env.PORT || process.env.port || 1337;
 server.listen(port);
-console.log(oidc.generate('yEYxAB5vOTMW87HGeS8nM161ApsBCWFPfeP8W3IAg0AIdk4yBGdo2oozASLCKokn8nTRYzUtr9U6vcHH', 'RS256'))
 console.log("Server running at http://localhost:%d", port);
