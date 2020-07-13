@@ -1,7 +1,6 @@
 const http = require('http');
 const util = require('util');
 const logger = require('./logger')
-const oidc = require('oidc-token-hash')
 const appInsight = require('applicationinsights')
 const { strict: assert } = require('assert');
 
