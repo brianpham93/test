@@ -1,6 +1,7 @@
 const http = require('http');
 const logger = require('./logger')
 const appInsight = require('applicationinsights')
+const { strict: assert } = require('assert');
 
 appInsight.setup('e2a2a87b-da65-4e7d-a927-3bf4aa6af0d3')
 .setAutoDependencyCorrelation(true)
@@ -11,7 +12,7 @@ appInsight.setup('e2a2a87b-da65-4e7d-a927-3bf4aa6af0d3')
 .setAutoCollectConsole(true, true)
 .setSendLiveMetrics(false)
 .setDistributedTracingMode(appInsight.DistributedTracingModes.AI)
-appInsight.start()
+.start()
 const server = http.createServer((request, response) => {
     logger.info('Request received')
     logger.debug('Request: ', request.headers)
